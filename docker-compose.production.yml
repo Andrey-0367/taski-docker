@@ -5,6 +5,9 @@ volumes:
   static_volume:
 
 services:
+  web:
+    depends_on:
+      - db
   db:
     image: postgres:13.10
     env_file: .env
