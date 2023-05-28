@@ -2,6 +2,8 @@ FROM python:3.9-slim
 
 WORKDIR /app
 
+RUN apt-get -y install python3-pip
+
 RUN pip install gunicorn==20.1.0
 
 COPY requirements.txt ./
